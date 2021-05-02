@@ -1,0 +1,95 @@
+function obtenerInformacion(materia) {
+    materias = {
+        fisica: ['Jose', 'Pedro', 'Cofla', 'Leandro', 'Juan'],
+        matematica: ['Pedro', 'Maria','Cofla', 'Leandro'],
+        logica: ['Cofla', 'Leandro'],
+        ciencias: ['Jose', 'Pedro', 'Maria', 'Leandro', 'Alberto', 'Alexandra'],
+    }
+    
+    if (materias[materia] !== undefined) {
+        return `Profesor: ${materias[materia][0]} <br>
+        Curso: ${materia} <br>
+        Alumnos del curso: ${materias[materia]} <br>`;
+    }
+
+    else  {
+        return materias;
+    }
+}
+function obtenerInformacionCiclo2(materia) {
+    materias = {
+        filosofia: ['Jose', 'Pedro', 'Cofla', 'Leandro', 'Juan'],
+        psicologia: ['Pedro', 'Maria','Cofla', 'Leandro'],
+        politica: ['Cofla', 'Leandro'],
+        geologia: ['Jose', 'Pedro', 'Maria', 'Leandro'],
+    }
+    
+    if (materias[materia] !== undefined) {
+        return `Profesor: ${materias[materia][0]} <br>
+        Curso: ${materia} <br>
+        Alumnos del curso: ${materias[materia]} <br>`;
+    }
+    else {
+        return materias;
+    }
+}
+
+function mostrarInfoCiclo () {
+    let ciclo = prompt('Ingrese ciclo');
+    let ciclo1 = obtenerInformacion();
+    let ciclo2 = obtenerInformacionCiclo2();
+    let resultado = [];
+
+    if (ciclo == 1) {
+        for (e in ciclo1) {
+            resultado.push(' ' + e );
+        }
+    }
+
+    else if (ciclo == 2) {
+        for (e in ciclo2) {
+            resultado.push(' ' + e);
+        }
+    }
+    return [ciclo, `Las clases del ${ciclo}º ciclo son: ${resultado}`]
+}
+
+function mostrarInfo () {
+    let ciclo = mostrarInfoCiclo();
+    let curso = prompt(`${ciclo[1]} elige uno`);
+    let resultado;
+    let validar = false;
+    if (ciclo[0] == 1) {
+        resultado = obtenerInformacion(curso);
+    }
+
+    else if (ciclo[0] == 2) {
+        resultado = obtenerInformacionCiclo2(curso);
+    }
+
+    document.write(resultado)
+    }
+
+
+
+function cantidadClases(alumno) {
+    let resultado = obtenerInformacion();
+    let lista = [];
+    let total = 0;
+    for (e in resultado) {
+        if (resultado[e].includes(alumno)){
+            total ++;
+            lista.push(" " + e);
+        }
+    }
+    return `El alumno ${alumno} está en ${total} clases: ${lista} <br>`;
+}
+
+function mostrarInfoAlumno () {
+    let estudiante = prompt('ingresa el nombre del alumno');
+    let resultado = cantidadClases(estudiante);
+    document.write(resultado);
+}
+
+
+mostrarInfo();
