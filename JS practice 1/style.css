@@ -1,0 +1,41 @@
+body {
+  color: #222;
+  font-family: sans-serif;
+}
+
+.flex-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.flex-item {
+  margin: 15px;
+  flex-grow: 1;
+  box-shadow: brown 2px;
+  max-width: 320px;
+  border: 2px solid #888;
+  padding: 15px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+  background: linear-gradient(rgba(0, 102, 255, 0.849), lightblue);
+}
+
+h2,
+h3,
+p {
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.flex-item:hover {
+  transform: translateY(-2px);
+}
+.flex-item:focus {
+  border: 2px solid rgb(48, 163, 44);
+  box-shadow: 0px 0px 30px rgb(2, 124, 2);
+}
+
+img {
+  width: 300px;
+}
