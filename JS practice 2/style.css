@@ -1,0 +1,42 @@
+body {
+  font-family: sans-serif;
+}
+
+form {
+  width: 50%;
+  padding: 20px;
+  background: black;
+  margin: auto;
+}
+
+input {
+  display: block;
+  padding: 6px;
+  width: 90%;
+  margin: 9px auto;
+  background: transparent;
+  color: white;
+}
+
+.btn-enviar {
+  padding: 10px 5px;
+  color: #888;
+  width: fit-content;
+  border-radius: 14px;
+}
+
+.btn-enviar:hover {
+  background: linear-gradient(rgb(13, 17, 10), rgba(103, 105, 105, 0.993));
+}
+
+input:focus::placeholder {
+  opacity: 0;
+}
+
+.red {
+  color: rgb(175, 13, 13);
+}
+
+.green {
+  color: rgb(39, 148, 39);
+}
