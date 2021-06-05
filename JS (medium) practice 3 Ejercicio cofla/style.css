@@ -1,0 +1,31 @@
+body {
+  font-family: sans-serif;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-rows: 50px;
+  grid-template-columns: repeat(4, minmax(min-content, max-content));
+  grid-auto-rows: 50px;
+}
+
+.grid-item {
+  padding: 10px;
+  border: 1px solid rgb(0, 174, 255);
+  margin: 5px;
+}
+
+.btn-confirmar {
+  margin-left: 5px;
+  margin-top: 10px;
+  padding: 15px;
+  font-size: 18px;
+  background: linear-gradient(rgb(82, 168, 139), rgba(19, 73, 28, 0.333));
+  border-radius: 10px;
+  color: rgb(0, 0, 0);
+  border: none;
+}
+
+.btn-confirmar:hover {
+  background: linear-gradient(rgb(67, 129, 108), rgba(16, 48, 21, 0.333));
+}
