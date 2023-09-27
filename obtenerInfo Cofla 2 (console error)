@@ -1,5 +1,5 @@
-function obtenerInformacion(materia) {
-    materias = {
+function obtenerInformacion(materias) {
+    let materias = {
         fisica: ['Jose', 'Pedro', 'Cofla', 'Leandro', 'Juan'],
         matematica: ['Pedro', 'Maria','Cofla', 'Leandro'],
         logica: ['Cofla', 'Leandro'],
@@ -17,7 +17,7 @@ function obtenerInformacion(materia) {
     }
 }
 function obtenerInformacionCiclo2(materia) {
-    materias = {
+    let materias = {
         filosofia: ['Jose', 'Pedro', 'Cofla', 'Leandro', 'Juan'],
         psicologia: ['Pedro', 'Maria','Cofla', 'Leandro'],
         politica: ['Cofla', 'Leandro'],
@@ -54,7 +54,7 @@ function mostrarInfoCiclo () {
     return [ciclo, `Las clases del ${ciclo}º ciclo son: ${resultado}`]
 }
 
-function mostrarInfo () {
+function mostrarInfo (materia) {
     let ciclo = mostrarInfoCiclo();
     let curso = prompt(`${ciclo[1]} elige uno`);
     let validar1 = obtenerInformacion();
